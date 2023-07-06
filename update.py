@@ -23,8 +23,6 @@ while True:
         conn = sqlite3.connect("data.db")
         cur = conn.cursor()
 
-        conn.execute('CREATE TABLE IF NOT EXISTS tetrio_ranks(id INTEGER, name TEXT, profile TEXT, offline TEXT)')
-        
         cur.execute("SELECT id FROM member_data")
 
         rows = cur.fetchall()
